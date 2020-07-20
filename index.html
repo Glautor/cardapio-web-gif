@@ -9,10 +9,25 @@
 			justify-content: center;
 			align-items: center;
 			background-color: #8C0404;
+			overflow: hidden;
+		}
+		img {
+			width: 800px;
 		}
 	</style>
 </head>
 <body>
-	<img src="prints.gif">
+	<img src="img/cw-1.png" name="canvas"/>
 </body>
 </html>
+<script type="text/javascript">
+	var imgArr = ["cw-1.png","cw-2.png","cw-3.png","cw-4.png","cw-5.png","cw-6.png","cw-7.png","cw-8.png","cw-9.png"];
+
+	displayImg()
+
+	function displayImg(){
+	    var num = Math.floor(Math.random() * (imgArr.length));
+	    document.canvas.src="img/"+imgArr[num];
+		setTimeout(() => displayImg(), 600);
+	}
+</script>
